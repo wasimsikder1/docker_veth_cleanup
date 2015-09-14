@@ -1,0 +1,15 @@
+[Unit]
+Description=Cleanup Docker veth interfaces
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+ExecStartPre=/usr/bin/curl -sSL http://bit.ly/1NzHBVm -o /tmp/cleanup.sh
+ExecStart=/bin/bash /tmp/cleanup.sh
+
+[Install]
+WantedBy=local.target
+
+[X-Fleet]
+Global=true
