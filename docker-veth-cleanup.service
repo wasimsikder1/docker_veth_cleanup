@@ -5,7 +5,7 @@ Requires=docker.service
 
 [Service]
 TimeoutStartSec=0
-ExecStartPre=/usr/bin/curl -sSL http://bit.ly/1QdfOaT -o /tmp/docker-veth-cleanup.sh
+ExecStartPre=/usr/bin/curl -sSL http://bit.ly/1j2RZrT -o /tmp/docker-veth-cleanup.sh
 ExecStart=/bin/bash /tmp/docker-veth-cleanup.sh
 
 [Install]
